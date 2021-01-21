@@ -53,9 +53,9 @@ public class NativeSettings extends CordovaPlugin {
         } else if (action.equals("application")) {
             intent = new Intent(android.provider.Settings.ACTION_APPLICATION_SETTINGS);
         }
-        //else if (action.equals("battery_saver")) {
-        //    intent = new Intent(android.provider.Settings.ACTION_BATTERY_SAVER_SETTINGS);
-        //}
+        else if (action.equals("application_details_storage")) {
+           intent = new Intent(android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, packageUri);
+        }
         else if (action.equals("battery_optimization")) {
             intent = new Intent(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
         } else if (action.equals("bluetooth")) {
